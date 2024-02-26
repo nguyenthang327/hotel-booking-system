@@ -49,7 +49,7 @@ class RoomManagement
                 'desc' => $request->input('desc'),
                 'price' => $request->input('price') ?? 0,
                 'type' => $request->input('type') ?? Room::TYPE_SINGLE,
-                'status' => $request->input('type') ?? Room::STATUS_OPEN,
+                'status' => $request->input('status') ?? Room::STATUS_OPEN,
             ];
 
             $room = Room::create($params);
@@ -91,7 +91,7 @@ class RoomManagement
                 'desc' => $request->input('desc'),
                 'price' => $request->input('price') ?? 0,
                 'type' => $request->input('type') ?? Room::TYPE_SINGLE,
-                'status' => $request->input('type') ?? Room::STATUS_OPEN,
+                'status' => $request->input('status') ?? Room::STATUS_OPEN,
             ];
 
             $room->update($params);
