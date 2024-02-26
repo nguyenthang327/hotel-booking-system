@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Frontend\Auth\AuthController;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,9 +16,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+
+// $tables = DB::select('SHOW TABLES');
+//     dump(DB::connection()->getDatabaseName());
+//     // return view('welcome');
+//     dd($tables);
 });
 
-Route::get('/login', [AuthController::class, 'loginView']);
+// Route::get('/login', [AuthController::class, 'loginView']);
 
-Route::post('/login', [AuthController::class, 'login'])->name('login.post');
+// Route::post('/login', [AuthController::class, 'login'])->name('login.post');
